@@ -53,43 +53,179 @@ struct CarWash            //1) a U.D.T. with a random number of member variables
 /*
  1)
  */
+struct Playlist
+{
+    int numMusic = 20;
+    bool state = 1;
+    char playMode = 'A';
 
+    struct Music
+    {
+        int orderOfTheMusic = 5;
+        float lengthOfTimeOfTheMusic = 3.55;
+    
+    };
+
+    void informationOfMusic( Music music );
+
+    Music lastestAddedMusic;
+};
 /*
  2)
  */
+struct Shoppingcart
+{
+    int numItems = 3;
+    float weightItems = 6.99;
 
+    struct Item
+    {
+        float priceOfItem = 4.67;
+        bool inStock = 1;
+    };
+    void statusOfItem( Item item );
+
+    Item toiletPaper;
+
+
+};
 /*
  3)
  */
+struct Plan
+{
+    int numTodo = 5;
+    int numDateOfTheYear = 156;
 
+    struct Todo
+    {
+        float timeNeeded = 3.50;
+        bool completed = 0;
+    };
+    void statusOfTodo( Todo todo);
+
+    Todo quarantine;
+
+};
 /*
  4)
  */
 
+struct OnlineCourse
+{
+    int numChapter = 16;
+    float timeOfCourse = 8.00;
+
+    struct Assignment
+    {
+        int numRequirement = 5;
+        int dueDate = 135;
+    };
+    void infoAssignment( Assignment assignement);
+
+    Assignment buildABluePrint;
+};
 /*
  5)
  */
+struct Attendence
+{
+    int numStudent = 16;
+    float timeOfEntering = 8.4;
+    
+    struct Student
+    {
+        float quiz =9.67;
+        int numWorkstation = 14;
 
+    };
+    void infoStudent( Student student);
+
+    Student Amanda;
+};
 /*
  6)
  */
+struct AC
+{
+    bool off = 0;
 
+    struct ModeForCool
+    {
+        float currentTemperature = 79;
+        float setTemperature = 74.5;
+        bool cool = 1;
+    };
+    void autoControlCool( ModeForCool modeForCool);
+
+    ModeForCool exceed745;
+};
 /*
  7)
  */
+struct Shortcuts
+{
+    char brandKeyboard = 'A';
+    char typeKeyboard = '7678';
 
+    struct Function
+    {
+        int howManyKeyToTap = 3;
+        bool tapAllAtOnce = 1;
+    };
+    void searchShortcutForFunction( Function function);
+    Function shuttle;
+};
 /*
  8)
  */
+struct BusService
+{
+    int numRoutes = 5;
 
+
+    struct Stop
+    {
+        int numRoutesHaveThisStop = 2;
+        char TypeRoute1 = 'A';
+        char TypeRoute2 = 'F';
+    };
+    void theClosestStop(Stop stop);
+    Stop BoulderSt;
+};
 /*
  9)
  */
+struct Recipe
+{
+    int numDishesForDinner = 4;
 
+    struct Dish
+    {
+        int numVegetables = 3;
+        int numMeat = 1;
+        int numFruits = 0;
+    };
+
+    void IngredientsForADish( Dish dish);
+    Dish SichuanFishwithPickledMustardGreens;
+};
 /*
  10)
  */
+ struct Printer
+ {
+     float volumeOfInk = 0.44;
+     int numPaperCanBePrinted = 380;
 
+     struct Task
+     {
+         int numFile = 2;
+         int numPages = 4;
+     };
+     void statusQuene( Task task);
+     Task brotherHL2390;
+ };
 #include <iostream>
 int main()
 {
