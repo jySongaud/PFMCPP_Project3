@@ -62,7 +62,7 @@ struct Playlist
     struct Music
     {
         int orderOfTheMusic = 5;
-        float lengthOfTimeOfTheMusic = 3.55;
+        float lengthOfTimeOfTheMusic = 3.55f;
     
     };
 
@@ -76,11 +76,11 @@ struct Playlist
 struct Shoppingcart
 {
     int numItems = 3;
-    float weightItems = 6.99;
+    float weightItems = 6.99f;
 
     struct Item
     {
-        float priceOfItem = 4.67;
+        float priceOfItem = 4.67f;
         bool inStock = 1;
     };
     void statusOfItem( Item item );
@@ -99,7 +99,7 @@ struct Plan
 
     struct Todo
     {
-        float timeNeeded = 3.50;
+        float timeNeeded = 3.50f;
         bool completed = 0;
     };
     void statusOfTodo( Todo todo);
@@ -114,7 +114,7 @@ struct Plan
 struct OnlineCourse
 {
     int numChapter = 16;
-    float timeOfCourse = 8.00;
+    float timeOfCourse = 8.00f;
 
     struct Assignment
     {
@@ -130,12 +130,16 @@ struct OnlineCourse
  */
 struct Attendence
 {
-    int numStudent = 16;
-    float timeOfEntering = 8.4;
-    
+    struct SumAttendence
+    {
+        int numStudent = 16;
+        int todayStudent = 14;
+        float percentageAttendence = 0.875f;
+    };
+
     struct Student
     {
-        float quiz =9.67;
+        float quiz =9.67f;
         int numWorkstation = 14;
 
     };
@@ -152,8 +156,8 @@ struct AC
 
     struct ModeForCool
     {
-        float currentTemperature = 79;
-        float setTemperature = 74.5;
+        float currentTemperature = 79.0f;
+        float setTemperature = 74.5f;
         bool cool = 1;
     };
     void autoControlCool( ModeForCool modeForCool);
@@ -166,7 +170,7 @@ struct AC
 struct Shortcuts
 {
     char brandKeyboard = 'A';
-    char typeKeyboard = '7678';
+    char typeKeyboard = 'C';
 
     struct Function
     {
@@ -215,7 +219,7 @@ struct Recipe
  */
  struct Printer
  {
-     float volumeOfInk = 0.44;
+     float volumeOfInk = 0.44f;
      int numPaperCanBePrinted = 380;
 
      struct Task
