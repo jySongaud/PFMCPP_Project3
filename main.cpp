@@ -202,7 +202,7 @@ struct BusService
  */
 struct Recipe
 {
-    int numDishesForDinner = 4;
+    int numDishesDinner = 4;
 
     struct Dish
     {
@@ -211,8 +211,8 @@ struct Recipe
         int numFruits = 0;
     };
 
-    void IngredientsForADish( Dish dish);
-    Dish SichuanFishwithPickledMustardGreens;
+    void IngredDish( Dish dish);
+    Dish SichuanFish;
 };
 /*
  10)
